@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COM3021/COMM115 - Data Science at Scale – GCP Workshops</title>
+  <meta name="description" content="Static site for the Data Science at Scale module: Google Cloud Platform workshops."/>
+  <style>
+    :root{
+      --bg: #0d1117;
+      --panel: #161b22;
+      --text: #d1d7e0;
+      --muted:#8b95a7;
+      --accent:#3ba4ff;
+      --accent-2:#34a853;
+      --ring:#fbbc04;
+      --chip:#ea4335;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{opacity:.9; text-decoration:underline}
+    .wrap{max-width:1100px; margin:0 auto; padding:24px}
+    header{display:flex; align-items:center; justify-content:space-between; padding:18px 0;}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:40px; height:40px; border-radius:10px; background: conic-gradient(from 200deg, var(--accent), var(--ring), var(--chip), var(--accent-2), var(--accent)); box-shadow:0 0 0 3px #0005 inset, 0 6px 16px #0009;}
+    .title{font-weight:700; letter-spacing:.3px}
+    nav{display:flex; gap:16px; font-size:14px}
+    .hero{margin-top:18px; padding:32px; border-radius:16px; background:linear-gradient(180deg, #101826, #0d121d); box-shadow: 0 2px 24px #0007; position:relative; overflow:hidden;}
+    .hero h1{margin:0 0 8px 0; font-size:32px}
+    .hero p{margin:0; color:var(--muted)}
+    .badges{margin-top:16px; display:flex; gap:8px; flex-wrap:wrap}
+    .chip{font-size:12px; padding:6px 10px; border-radius:999px; background:#ffffff12; border:1px solid #ffffff22}
+    .rings{position:absolute; right:-60px; top:-60px; width:220px; height:220px; border-radius:50%; background: radial-gradient(closest-side, #ffffff10, transparent 70%); outline: 2px dashed var(--ring); outline-offset: -14px; opacity:.5; filter: blur(.4px);}
+    .grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-top:22px}
+    .card{background:var(--panel); border:1px solid #ffffff10; border-radius:14px; padding:16px; box-shadow: 0 1px 10px #0006;}
+    .card h3{margin:0 0 6px 0; font-size:18px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .card .cta{margin-top:12px; display:inline-block; padding:8px 12px; border-radius:10px; background:#ffffff10; border:1px solid #ffffff1f}
+    .timeline{margin-top:28px}
+    .timeline h2{margin:0 0 10px 0}
+    .row{display:grid; grid-template-columns: 110px 1fr; gap:14px; padding:12px 0; border-top:1px dashed #ffffff1a}
+    .row:first-child{border-top:none}
+    .wk{color:#9ab; font-weight:600}
+    .footer{margin:30px 0 10px 0; color:var(--muted); font-size:12px; text-align:center}
+    .notice{margin-top:18px; padding:12px; border:1px solid #ffffff22; background:#ffffff08; border-radius:12px; font-size:13px; color:#c9d4e3}
+    .button{display:inline-block; margin-top:14px; padding:10px 14px; border-radius:12px; background:linear-gradient(180deg, #2a67ff, #1c4bcc); border:none; color:white; font-weight:600}
+    .button:active{transform:translateY(1px)}
+    @media (max-width: 520px){ .row{grid-template-columns: 1fr} .wk{margin-bottom:-6px} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">COM3021/COMM115 - Data Science at Scale</div>
+      </div>
+      <nav>
+        <a href="#overview">Overview</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="overview">
+      <div class="rings" aria-hidden="true"></div>
+      <h1>GCP Workshops</h1>
+      <p>Hands-on labs to practice scalable data workflows on Google Cloud – with a focus on cost-awareness and reproducibility.</p>
+      <div class="badges">
+        <span class="chip">GCS</span>
+        <span class="chip">BigQuery</span>
+        <span class="chip">Vertex AI</span>
+      </div>
+      <a class="button" href="#workshops">View Workshop List</a>
+      <div class="notice">
+        Tip: You can host this page directly from a Google Cloud Storage bucket using static website hosting.
+      </div>
+    </section>
+
+    <section id="workshops" class="timeline">
+      <h2>Workshop Line-up</h2>
+      <div class="row"><div class="wk"></div><div><strong>GCP & Cost Management</strong><br/><span class="muted">IAM basics, budgets & alerts, billing reports</span></div></div>
+      <div class="row"><div class="wk"></div><div><strong>Cloud Storage (GCS)</strong><br/><span class="muted">Buckets,  static site hosting</span></div></div>
+      <div class="row"><div class="wk"></div><div><strong>BigQuery Fundamentals</strong><br/><span class="muted">Datasets, tables, query cost estimator</span></div></div>  
+      <div class="row"><div class="wk"></div><div><strong>Vertex AI</strong><br/><span class="muted">AutoML, training vs inference costs</span></div></div>
+      <div class="row"><div class="wk"></div><div><strong>Compute Choices</strong><br/><span class="muted">VMs, Dataproc, Workbench – cost comparisons</span></div></div>
+      
+      
+    </section>
+
+    <section id="resources" style="margin-top:30px;">
+      <h2>Resources</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>GCS Static Site Setup</h3>
+          <p>Upload <code>index.html</code>, enable static website hosting, and set public read for the site object.</p>
+          <a class="cta" href="#" onclick="alert('Replace with your course guide or README link.'); return false;">Read guide</a>
+        </div>
+        <div class="card">
+          <h3>Budget & Alerts</h3>
+          <p>Create a project budget and email alerts at 50%, 90%, 100% thresholds to avoid surprise costs.</p>
+          <a class="cta" href="#" onclick="alert('Replace with your Budget & Alerts instructions.'); return false;">Budget steps</a>
+        </div>
+        <div class="card">
+          <h3>BigQuery Datasets</h3>
+          <p>Load a public dataset and explore query cost estimator before running heavy queries.</p>
+          <a class="cta" href="#" onclick="alert('Replace with your BigQuery lab link.'); return false;">Open lab</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">© Data Science at Scale · University of Exeter · Example static site for GCS</p>
+  </div>
+</body>
+</html>

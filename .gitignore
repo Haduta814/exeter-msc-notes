@@ -1,0 +1,15 @@
+# macOS / editor junk
+.DS_Store
+._*
+__MACOSX/
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+# Large data – download separately (see README)
+*.pt
+*.pth
+*.ckpt
+cifar10_validation_data/
